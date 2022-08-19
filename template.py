@@ -2,7 +2,8 @@
 
 import pathlib
 import sys
-import parse
+import re
+from dataclasses import dataclass
 
 def parse(puzzle_input):
     """Parse input"""
