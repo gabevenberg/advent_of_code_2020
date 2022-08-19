@@ -2,7 +2,7 @@
 
 import pathlib
 import sys
-import parse
+# import parse
 
 def parse(puzzle_input):
     """Parse input"""
@@ -25,5 +25,6 @@ if __name__ == "__main__":
     for path in sys.argv[1:]:
         print(f"{path}:")
         puzzle_input = pathlib.Path(path).read_text().strip()
+        print(f'{puzzle_input}')
         solutions = solve(puzzle_input)
         print("\n".join(str(solution) for solution in solutions))
