@@ -21,7 +21,9 @@ def parse(puzzle_input: str):
 def part1(data):
     """Solve part 1"""
     test = lambda x: x.first<=x.password.count(x.letter)<=x.second
-    return sum(1 for p in data if test(p))
+    # these two lines are equivilant.
+    # return sum(1 for p in data if test(p))
+    return len([1 for p in data if test(p)])
 
 def test_password(passwordSpec: PasswordSpec):
     if passwordSpec.password[passwordSpec.first-1]==passwordSpec.letter:
