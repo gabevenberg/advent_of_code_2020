@@ -2,7 +2,7 @@
 
 import pathlib
 import pytest
-import day5 as aoc
+import day6 as aoc
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
 
@@ -20,14 +20,36 @@ def example2():
 # @pytest.mark.skip(reason="Not implemented")
 def test_parse_example1(example1):
     """Test that input is parsed properly"""
-    assert example1 == {119, 357, 567, 820}
+    assert example1 == [
+            [
+                ['a', 'b', 'c']
+                ],
+            [
+                ['a'],
+                ['b'],
+                ['c']
+                ],
+            [
+                ['a', 'b'],
+                ['a', 'c']
+            ],
+            [
+                ['a'],
+                ['a'],
+                ['a'],
+                ['a']
+            ],
+            [
+                ['b']
+            ]
+            ]
 
 # @pytest.mark.skip(reason="Not implemented")
 def test_part1_example1(example1):
     """Test part 1 on example input"""
-    assert aoc.part1(example1) == 820
+    assert aoc.part1(example1) == 11
 
-@pytest.mark.skip(reason="Not implemented")
-def test_part2_example2(example2):
+# @pytest.mark.skip(reason="Not implemented")
+def test_part2_example2(example1):
     """Test part 2 on example input"""
-    assert aoc.part2(example2) == ...
+    assert aoc.part2(example1) == 6
